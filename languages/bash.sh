@@ -435,3 +435,9 @@ function returntrap {
 }
 
 trap returntrap RETURN  # is executed each time a shell function or a script executed with the . or source commands finishes executing
+
+////////////////////////////////////////////////////////////////////////////////////
+awk 'NR==17 {print  $3}' test.txt                                 #printing 3rd word of 17th line
+cat test.txt | cut -d " "  --fields=3 | sed -n 17p                #printing 3 word of 17th line with awk engine
+
+
